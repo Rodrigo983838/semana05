@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<body id="cuerpoPagina">
+
+    <div class="container">
+
+      <div class="container">
+
+        <div>
+          <button onclick="prender()" class="btn btn-primary">prender</button>
+          <button onclick="apagar()" class="btn btn-danger">apagar</button>
+          <img id="foco" src="img/6.jpg" width="200px" height="200px" alt="esto es un foco">
+
+
+        </div>
+
+
+        <div class="row">
+
+          <button id="btnFclaro" onclick="cambiarFondo(`claro`)" class="btn btn-default">
+            Fondo Claro
+
+          </button>
+
+          <button id="btnFOscuro" onclick="cambiarFondo(`oscuro`)" class="btn btn-dark">
+            Fondo oscuro
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+        <form>
+            <div class="form-group">
+              <label for="txtNombre">nombre</label>
+              <input type="text" class="form-control" id="txtNombre" placeholder="ingrese nombre">
+              
+            </div>
+            <div class="form-group">
+              <label for="txtApellido">Apellido</label>
+              <input type="text" class="form-control" id="txtApellido" placeholder="ingrese Apellido">
+            </div>
+             
+            <button onclick="procesar()" type="button" class="btn btn-primary">Procesar</button>
+            <button onclick="limpiar()" type="button" class="btn btn-danger">Limpiar</button>
+
+          </form>
+
+
+    </div>
+    
+</body>
+
+<script>
+
+  function apagar(){
+    let foco = document.getElementById("foco");
+    foco.setAttribute("src","img/6.jpg");
+
+  }
+
+  function prender(){
+    let foco= document.getElementById("foco");
+    foco.setAttribute("src","img/5.jpg");
+
+
+
+  }
+
+
+
+  function cambiarFondo(fondo){
+    //alert("Fondo:" +fondo);
+
+    let pagina = document.getElementById("cuerpoPagina");
+    if (fondo==="claro"){
+      pagina.style.backgroundColor="yellow";
+
+    }
+    else {
+      pagina.style.backgroundColor="aquamarine";
+    }
+
+  }
+
+
+    function procesar(){
+      let nombre,dni
+
+
+
+
+
+        alert("se dio clic en el boton procesar");
+   }
+   function limpiar(){
+    document.getElementById("txtNombre").value="";
+    document.getElementById("txtApellido").value="";
+
+    alert("el nombre es: "+nombre);
+
+
+
+                  
+   }
+
+</script>
+
+
+</html>
